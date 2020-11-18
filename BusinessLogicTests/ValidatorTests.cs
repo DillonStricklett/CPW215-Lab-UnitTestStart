@@ -14,7 +14,6 @@ namespace BusinessLogicTests
         public void IsValidSsn_ValidInput_ReturnTrue(string input)
         {
             bool result = Validator.IsSsn(input);
-
             Assert.IsTrue(result);
         }
 
@@ -25,8 +24,8 @@ namespace BusinessLogicTests
         [DataRow("TenLetters")]
         public void IsValidSsn_InvalidInput_ReturnsFalse(string input)
         {
-            //TODO: Test the IsValidSSN method in the Validator class
-            Assert.Fail();
+            bool result = Validator.IsSsn(input);
+            Assert.IsFalse(result);
         }
 
         [TestMethod]
