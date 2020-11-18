@@ -17,16 +17,6 @@ namespace BusinessLogic
             {
                 return true;
             }
-            if(ssn.Length != 9 || string.IsNullOrEmpty(ssn))
-            {
-                return false;
-            }
-            int num;
-            bool isNum = int.TryParse(ssn, out num);
-            if (isNum)
-            {
-                return true;
-            }
             return false;
         }
 
