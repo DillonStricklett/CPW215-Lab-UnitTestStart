@@ -1,3 +1,4 @@
+using BusinessLogic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BusinessLogicTests
@@ -12,8 +13,9 @@ namespace BusinessLogicTests
         [DataRow("428-52-1234")]
         public void IsValidSsn_ValidInput_ReturnTrue(string input)
         {
-            //TODO: Test the IsValidSSN method in the Validator class
-            Assert.Fail();
+            bool result = Validator.IsSsn(input);
+
+            Assert.IsTrue(result);
         }
 
         [TestMethod]
