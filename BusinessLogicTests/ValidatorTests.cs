@@ -35,8 +35,8 @@ namespace BusinessLogicTests
         [DataRow(2000, 0, 50000)]
         public void IsWithinRange_NumInInclusiveRange_ReturnTrue(int test, int min, int max)
         {
-            //TODO: Test the IsWithinRange method in the Validator class
-            Assert.Fail();
+            bool result = Validator.IsWithinRange(test, min, max);
+            Assert.IsTrue(result);
         }
 
         [TestMethod]
